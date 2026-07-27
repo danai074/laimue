@@ -30,7 +30,6 @@
     <div class="steps">
       <div class="step active" id="step1">1 · เลือกภาพ</div>
       <div class="step" id="step2">2 · อ่านลายมือ</div>
-      <div class="step" id="step3">3 · แปลอังกฤษ</div>
     </div>
 
     <div class="drop" id="drop">
@@ -41,7 +40,7 @@
     <input type="file" id="fileInput" accept="image/*">
     <input type="file" id="cameraInput" accept="image/*" capture="environment">
 
-    <div class="btnrow">
+    <div class="btnrow" id="initialBtnRow">
       <button id="btnUpload">เลือกรูปจากเครื่อง</button>
       <button id="btnCamera">ถ่ายภาพด้วยกล้อง</button>
     </div>
@@ -60,8 +59,8 @@
         <span class="info-wrap">
           <button type="button" class="info-btn" id="infoBtn" aria-label="ข้อมูลเพิ่มเติมเกี่ยวกับโหมดความแม่นยำสูง" aria-expanded="false">i</button>
           <div class="info-popup" id="infoPopup" role="tooltip">
-            โหมดนี้จะขยายภาพ ปรับเป็นขาวดำ แก้แสงไม่สม่ำเสมอ (เช่น เงาบนกระดาษที่ถ่ายรูป) และลองอ่านด้วย 2 รูปแบบการตัดบรรทัดแล้วเลือกผลที่มั่นใจกว่า ก่อนอ่าน<br><br>
-            <b>ข้อควรรู้:</b> ลายมือหวัดจัดยังมีโอกาสอ่านผิดได้บ้าง และภาพที่ถ่ายเอียงมากๆ ระบบยังไม่ช่วยจัดมุมให้ จึงเปิดให้แก้ไขข้อความก่อนแปลเสมอ
+            โหมดนี้จะขยายภาพ ปรับเป็นขาวดำ แก้แสงไม่สม่ำเสมอ และปรับแต่งการอ่านให้เหมาะกับทั้งลายมือบนกระดาษและภาพเขียนจาก iPad/Tablet<br><br>
+            <b>ข้อควรรู้:</b> ลายมือหวัดจัดยังมีโอกาสอ่านผิดได้บ้าง และสามารถแก้ไขข้อความในช่องผลลัพธ์ได้เสมอ
           </div>
         </span>
       </div>
