@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<title>laimue</title>
+<meta name="theme-color" content="#A8391F">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="handwriting-translator.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">ต้นแบบฟรี · ไม่มีค่าใช้จ่าย</div>
+    <h1>laimue</h1>
+    <div class="h1-rule"></div>
+  </header>
+
+  <div class="stage">
+    <div class="steps">
+      <div class="step active" id="step1">1 · เลือกภาพ</div>
+      <div class="step" id="step2">2 · อ่านลายมือ</div>
+      <div class="step" id="step3">3 · แปลอังกฤษ</div>
+    </div>
+
+    <div class="drop" id="drop">
+      <div class="drop-icon">✎</div>
+      <p>ลากรูปมาวาง หรือคลิกเพื่อเลือกไฟล์</p>
+      <p class="hint">รองรับ .jpg .png · หรือถ่ายรูปจากกล้องมือถือได้เลย</p>
+    </div>
+    <input type="file" id="fileInput" accept="image/*">
+    <input type="file" id="cameraInput" accept="image/*" capture="environment">
+
+    <div class="btnrow">
+      <button id="btnUpload">เลือกรูปจากเครื่อง</button>
+      <button id="btnCamera">ถ่ายภาพด้วยกล้อง</button>
+    </div>
+
+    <div class="preview" id="preview" style="display:none;">
+      <img id="previewImg" alt="ภาพลายมือที่เลือก">
+      <div class="btnrow">
+        <button class="primary" id="btnRead">อ่านลายมือ</button>
+        <button id="btnReset">เลือกรูปใหม่</button>
+      </div>
+      <div class="accuracy-toggle">
+        <label class="accuracy-toggle-label">
+          <input type="checkbox" id="highAccuracy" checked>
+          <span><b>โหมดความแม่นยำสูง</b> — ใช้เวลานานขึ้น แต่อ่านลายมือได้แม่นยำกว่า</span>
+        </label>
+        <span class="info-wrap">
+          <button type="button" class="info-btn" id="infoBtn" aria-label="ข้อมูลเพิ่มเติมเกี่ยวกับโหมดความแม่นยำสูง" aria-expanded="false">i</button>
+          <div class="info-popup" id="infoPopup" role="tooltip">
+            โหมดนี้จะขยายภาพ ปรับเป็นขาวดำ แก้แสงไม่สม่ำเสมอ (เช่น เงาบนกระดาษที่ถ่ายรูป) และลองอ่านด้วย 2 รูปแบบการตัดบรรทัดแล้วเลือกผลที่มั่นใจกว่า ก่อนอ่าน<br><br>
+            <b>ข้อควรรู้:</b> ลายมือหวัดจัดยังมีโอกาสอ่านผิดได้บ้าง และภาพที่ถ่ายเอียงมากๆ ระบบยังไม่ช่วยจัดมุมให้ จึงเปิดให้แก้ไขข้อความก่อนแปลเสมอ
+          </div>
+        </span>
+      </div>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin:8px 0 0;">อ่านลายมือภาษาอังกฤษเท่านั้น รองรับทั้งเขียนในแอป (เช่น iPad) และภาพถ่ายบนกระดาษ · ใช้งานฟรี 100% โดยไม่ต้องใช้ API ภายนอก</p>
+    </div>
+
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-label"><span id="progressText">กำลังเตรียมระบบอ่านตัวอักษร…</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div id="techDetail" style="display:none;margin-top:8px;font-size:11.5px;color:#8A8577;word-break:break-word;"></div>
+    </div>
+
+    <div class="result" id="result">
+      <div class="panel">
+        <div class="panel-label"><span class="flag">✎</span><span id="ocrLabel">ข้อความที่อ่านได้ (แก้ไขได้)</span><button class="copy-btn" id="btnCopy">คัดลอก</button></div>
+        <textarea id="ocrText" placeholder="ข้อความที่อ่านได้จากลายมือจะแสดงที่นี่…"></textarea>
+        <div class="correction-note" id="correctionNote"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.0.4/tesseract.min.js"></script>
+<script src="handwriting-translator.js"></script>
+</body>
+</html>
