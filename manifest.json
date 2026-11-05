@@ -2,7 +2,7 @@
   "name": "laimue",
   "short_name": "laimue",
   "description": "ถ่ายภาพหรืออัปโหลดลายมือภาษาอังกฤษ แล้วอ่านเป็นข้อความ ฟรี ไม่มี API key",
-  "start_url": "./handwriting-translator.html",
+  "start_url": "./laimue-preview-v2-fixed.html",
   "display": "standalone",
   "background_color": "#F7F2E7",
   "theme_color": "#A8391F",
