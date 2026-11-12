@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>laimue · ถอดลายมือและแปลภาษา</title>
+  <meta name="theme-color" content="#A8391F">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkxhaW11ZSBpY29uIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q4NzA0ZCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhODM5MWYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiByeD0iNTIiIGZpbGw9IiNmN2YyZTciLz4KICA8cGF0aCBkPSJNODIgMTg0Yy0xNCAwLTI2LTExLTI2LTI1Vjk2YzAtMTQgMTItMjUgMjYtMjVoNDBjMTUgMCAyNyAxMSAyNyAyNXY3bDMxLTMxYzEyLTEyIDMxLTEyIDQzIDAgMTIgMTIgMTIgMzEgMCA0M0wxOTAgMTM4djIxYzAgMTQtMTEgMjUtMjUgMjVIODJ6bTQ2LTMwYzEwIDAgMTgtOCAxOC0xOHYtMTVjMC0xMC04LTE4LTE4LTE4aC0xYy0xMCAwLTE4IDgtMTggMTh2MTVjMCAxMCA4IDE4IDE4IDE4aDF6bTM2LTUzIDIxLTIxYzQtNCAxMC00IDE0IDBzNCAxMCAwIDE0bC0yMSAyMS0xNC0xNHoiIGZpbGw9InVybCgjZzEpIi8+CiAgPHBhdGggZD0iTTkxIDE5MWg4MGMxMCAwIDE4IDggMTggMTh2OEg3M3YtOGMwLTEwIDgtMTggMTgtMTh6IiBmaWxsPSIjMjIzMDRhIiBvcGFjaXR5PSIwLjkiLz4KPC9zdmc+Cg==" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkxhaW11ZSBpY29uIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZzEiIHgxPSIwIiB4Mj0iMSIgeTE9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q4NzA0ZCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhODM5MWYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiByeD0iNTIiIGZpbGw9IiNmN2YyZTciLz4KICA8cGF0aCBkPSJNODIgMTg0Yy0xNCAwLTI2LTExLTI2LTI1Vjk2YzAtMTQgMTItMjUgMjYtMjVoNDBjMTUgMCAyNyAxMSAyNyAyNXY3bDMxLTMxYzEyLTEyIDMxLTEyIDQzIDAgMTIgMTIgMTIgMzEgMCA0M0wxOTAgMTM4djIxYzAgMTQtMTEgMjUtMjUgMjVIODJ6bTQ2LTMwYzEwIDAgMTgtOCAxOC0xOHYtMTVjMC0xMC04LTE4LTE4LTE4aC0xYy0xMCAwLTE4IDgtMTggMTh2MTVjMCAxMCA4IDE4IDE4IDE4aDF6bTM2LTUzIDIxLTIxYzQtNCAxMC00IDE0IDBzNCAxMCAwIDE0bC0yMSAyMS0xNC0xNHoiIGZpbGw9InVybCgjZzEpIi8+CiAgPHBhdGggZD0iTTkxIDE5MWg4MGMxMCAwIDE4IDggMTggMTh2OEg3M3YtOGMwLTEwIDgtMTggMTgtMTh6IiBmaWxsPSIjMjIzMDRhIiBvcGFjaXR5PSIwLjkiLz4KPC9zdmc+">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;700&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#F7F2E7;
+      --ink:#22304A;
+      --ink-soft:#4C5A73;
+      --wax:#A8391F;
+      --wax-dark:#7A2A16;
+      --line:#DCD3BE;
+      --card:#FFFDF8;
+      --ok:#2F6B4F;
+    }
+    *{box-sizing:border-box;}
+    html{-webkit-text-size-adjust:100%;}
+    body{
+      margin:0;
+      background:var(--paper);
+      font-family:'Sarabun',sans-serif;
+      color:var(--ink);
+      line-height:1.6;
+      overflow-x:hidden;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .wrap{
+      max-width:880px;margin:0 auto;
+      padding:40px 20px 60px;
+      padding-left:max(20px, env(safe-area-inset-left));
+      padding-right:max(20px, env(safe-area-inset-right));
+    }
+    header{margin-bottom:48px;}
+    .eyebrow{
+      font-size:13px;letter-spacing:.08em;color:var(--wax);
+      font-weight:600;margin-bottom:10px;text-transform:uppercase;
+    }
+    h1{
+      font-family:'Noto Serif Thai',serif;
+      font-weight:700;
+      font-size:44px;
+      margin:0 0 10px;
+      color:var(--ink);
+      line-height:1.2;
+      letter-spacing:0.01em;
+    }
+    .h1-rule{width:64px;height:2px;background:var(--wax);margin:0;}
+    .stage{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:32px;
+      position:relative;
+      box-shadow:0 1px 0 var(--line);
+    }
+    .stage::before{
+      content:"";
+      position:absolute;top:0;left:28px;right:28px;height:3px;
+      background:repeating-linear-gradient(90deg,var(--wax) 0 14px, transparent 14px 24px);
+      opacity:.35;
+    }
+    .steps{display:flex;gap:8px;margin-bottom:20px;}
+    .step{
+      flex:1;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:600;
+      color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);
+      text-align:center;transition:all .2s;
+    }
+    .step.active{background:var(--wax);color:#fff;border-color:var(--wax);}
+    .step.done{background:var(--ok);color:#fff;border-color:var(--ok);}
+
+    .lang-switch-box{
+      display:flex;
+      gap:10px;
+      margin-bottom:20px;
+      justify-content:center;
+    }
+    .lang-option{
+      flex:1;
+      max-width:260px;
+      cursor:pointer;
+    }
+    .lang-option input{
+      display:none;
+    }
+    .lang-btn-card{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:10px;
+      font-size:13.5px;
+      font-weight:600;
+      color:var(--ink-soft);
+      transition:all .2s ease;
+      box-shadow:0 2px 0 var(--line);
+    }
+    .lang-option input:checked + .lang-btn-card{
+      background:#fff;
+      border-color:var(--wax);
+      color:var(--wax);
+      box-shadow:0 3px 0 var(--wax), 0 4px 10px rgba(168,57,31,0.15);
+      transform:translateY(-1px);
+    }
+
+    .drop{
+      border:2px dashed var(--line);
+      border-radius:12px;
+      padding:40px 20px;
+      text-align:center;
+      cursor:pointer;
+      transition:border-color .2s, background .2s;
+    }
+    .drop:hover, .drop.drag{border-color:var(--wax); background:#FBF6EC;}
+    .drop-icon{font-size:32px;margin-bottom:10px;color:var(--wax);}
+    .drop p{margin:0;font-size:15px;color:var(--ink-soft);}
+    .drop .hint{font-size:13px;color:#8A8577;margin-top:4px;}
+    .btnrow{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap;}
+    button{
+      font-family:'Sarabun',sans-serif;font-weight:600;font-size:14px;
+      padding:11px 20px;border-radius:9px;border:1px solid var(--line);
+      background:#fff;color:var(--ink);cursor:pointer;
+      box-shadow:0 3px 0 var(--line), 0 5px 10px rgba(34,48,74,0.10);
+      transform:translateY(0);
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s, color .12s, background .12s;
+    }
+    button:hover{border-color:var(--wax);color:var(--wax);}
+    button:active{transform:translateY(3px);box-shadow:0 0 0 var(--line), 0 1px 3px rgba(34,48,74,0.10);}
+    button.primary{background:var(--wax);color:#fff;border-color:var(--wax-dark);box-shadow:0 3px 0 var(--wax-dark), 0 6px 14px rgba(168,57,31,0.30);}
+    button.primary:hover{background:var(--wax-dark);color:#fff;}
+    button.primary:active{transform:translateY(3px);box-shadow:0 0 0 var(--wax-dark), 0 2px 5px rgba(168,57,31,0.30);}
+    button:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:0 3px 0 var(--line), 0 5px 10px rgba(34,48,74,0.10);}
+    input[type=file]{display:none;}
+    .preview{margin-top:20px;text-align:center;}
+    .preview img{max-width:100%;max-height:320px;border-radius:10px;border:1px solid var(--line);}
+    .progress-wrap{margin-top:18px;display:none;}
+    .progress-wrap.show{display:block;}
+    .progress-label{font-size:13px;color:var(--ink-soft);margin-bottom:6px;display:flex;justify-content:space-between;}
+    .progress-bar{height:6px;background:var(--paper);border-radius:4px;overflow:hidden;border:1px solid var(--line);}
+    .progress-fill{height:100%;background:var(--wax);width:0%;transition:width .2s;}
+    .result{margin-top:28px;display:none;}
+    .result.show{display:block;}
+    .panel{margin-bottom:18px;}
+    .panel-label{
+      font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+      color:var(--ink-soft);margin-bottom:8px;display:flex;align-items:center;gap:8px;
+    }
+    .panel-label .flag{font-size:14px;}
+    textarea{
+      width:100%;min-height:320px;padding:16px;border-radius:10px;
+      border:1px solid var(--line);font-family:'Sarabun',sans-serif;font-size:15px;
+      color:var(--ink);background:#fff;resize:vertical;line-height:1.7;
+    }
+    .correction-note{
+      display:none;margin-top:8px;font-size:12.5px;color:var(--ink-soft);
+      align-items:center;gap:6px;
+    }
+    .correction-note.show{display:flex;}
+    .correction-note.fixed{color:var(--ok);}
+    .correction-note .dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+    .copy-btn{
+      margin-left:auto;font-size:12px;padding:5px 12px;border-radius:7px;
+      box-shadow:0 2px 0 var(--line), 0 3px 6px rgba(34,48,74,0.08);
+    }
+    .copy-btn:active{transform:translateY(2px);box-shadow:0 0 0 var(--line), 0 1px 2px rgba(34,48,74,0.08);}
+    .copy-btn.copied{color:var(--ok);border-color:var(--ok);}
+
+    /* Auth Overlay & New Features UI */
+    .auth-overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .auth-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 36px 28px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(34, 48, 74, 0.08);
+      position: relative;
+    }
+    .auth-card::before {
+      content: "";
+      position: absolute; top: 0; left: 24px; right: 24px; height: 3px;
+      background: repeating-linear-gradient(90deg, var(--wax) 0 14px, transparent 14px 24px);
+      opacity: .35;
+    }
+    .input-group {
+      position: relative;
+      margin: 16px 0 12px;
+    }
+    .auth-input {
+      width: 100%;
+      padding: 12px 40px 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      font-family: 'Sarabun', sans-serif;
+      font-size: 14px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .auth-input:focus {
+      border-color: var(--wax);
+    }
+    .toggle-eye-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 4px;
+      color: var(--ink-soft);
+    }
+    .toggle-eye-btn:hover {
+      color: var(--wax);
+      background: none;
+    }
+    .auth-error {
+      color: var(--wax);
+      font-size: 13px;
+      margin-top: 8px;
+      display: none;
+    }
+    .user-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .key-badge {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      background: var(--paper);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+    .history-box {
+      margin-top: 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .history-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .history-list {
+      max-height: 320px;
+      overflow-y: auto;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .history-search {
+      display: flex;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .history-search input {
+      flex: 1;
+      min-width: 0;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font: inherit;
+      color: var(--ink);
+    }
+    .history-search button, .history-pager button {
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+    .history-status {
+      min-height: 20px;
+      margin: 6px 0;
+      color: var(--ink-soft);
+      font-size: 12px;
+    }
+    .history-item {
+      background: #fff;
+      padding: 9px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      transition: border-color 0.15s;
+    }
+    .history-item:hover {
+      border-color: var(--wax);
+    }
+    .history-item button {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      color: var(--ink);
+      text-align: left;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      font-weight: 400;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .history-item button:hover { color: var(--wax); }
+    .history-meta {
+      margin-top: 5px;
+      color: #8A8577;
+      font-size: 11px;
+    }
+    .history-pager {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    /* Rating & Feedback Component Style */
+    .rating-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rating-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .stars-wrapper {
+      display: flex;
+      gap: 6px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .star {
+      color: #D1C9B8;
+      transition: color 0.15s, transform 0.1s;
+      user-select: none;
+    }
+    .star:hover, .star.active {
+      color: #E67E22;
+    }
+    .rating-score-display {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--wax);
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- หน้าเข้าสู่ระบบ (Auth Screen) -->
+  <div class="auth-overlay" id="authScreen">
+    <div class="auth-card">
+      <div class="eyebrow">ระบบถอดความและแปลภาษาระดับสูง</div>
+      <h1 style="font-size: 36px; margin-bottom: 8px;">laimue</h1>
+      <div class="h1-rule" style="margin: 0 auto 20px;"></div>
+      
+      <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 0;">
+        เข้าสู่ระบบด้วย <b>Gemini API Key</b> ของคุณเพื่อเริ่มใช้งาน
+      </p>
+
+      <form id="authForm" onsubmit="event.preventDefault(); handleLogin();">
+        <div class="input-group">
+          <input type="text" id="loginUsername" class="auth-input" placeholder="ตั้งชื่อผู้ใช้งาน..." required maxlength="60" autocomplete="username">
+        </div>
+        <div class="input-group">
+          <input type="password" id="loginApiKey" class="auth-input" placeholder="วาง Gemini API Key ที่นี่..." required autocomplete="off">
+          <button type="button" class="toggle-eye-btn" id="togglePasswordBtn" title="แสดง/ซ่อนคีย์">👁️</button>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: flex-start; gap: 8px; margin-bottom: 16px; text-align: left;">
+          <input type="checkbox" id="rememberKey" style="accent-color: var(--wax); width: 15px; height: 15px; cursor: pointer;">
+          <label for="rememberKey" style="font-size: 13px; color: var(--ink-soft); cursor: pointer;">จดจำ API Key ในเบราว์เซอร์นี้</label>
+        </div>
+
+        <button type="submit" id="btnLoginSubmit" class="primary" style="width: 100%; padding: 12px;">เข้าสู่ระบบใช้งาน</button>
+      </form>
+
+      <div class="auth-error" id="authError">กรุณากรอก API Key ให้ถูกต้อง</div>
+
+      <p class="hint" style="margin-top: 20px; font-size: 12.5px;">
+        ยังไม่มีคีย์? รับคีย์ฟรีได้ที่ <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com/app/apikey</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- หน้าแอปหลัก (App Content) -->
+  <div class="wrap" id="mainAppScreen" style="display: none;">
+    <header>
+      <div class="user-header-bar">
+        <span class="key-badge" id="keyBadgeDisplay">🔑 API Key: ••••••••••••</span>
+        <button type="button" onclick="handleLogout()" style="padding: 4px 10px; font-size: 12px;">ออกจากระบบ</button>
+      </div>
+      <div class="eyebrow">ระบบถอดความและแปลภาษาระดับสูง</div>
+      <h1>laimue</h1>
+      <div class="h1-rule"></div>
+    </header>
+
+    <main class="stage">
+      <div class="steps">
+        <div class="step active" id="step1">1 · เลือกภาพ</div>
+        <div class="step" id="step2">2 · อ่านลายมือ</div>
+      </div>
+
+      <!-- กล่องเลือกภาษา -->
+      <div class="lang-switch-box" role="radiogroup" aria-label="เลือกภาษาของลายมือ">
+        <label class="lang-option">
+          <input type="radio" name="ocrLang" value="eng" checked>
+          <span class="lang-btn-card">🇬🇧 ภาษาอังกฤษ (English)</span>
+        </label>
+        <label class="lang-option">
+          <input type="radio" name="ocrLang" value="tha">
+          <span class="lang-btn-card">🇹🇭 ภาษาไทย (Thai)</span>
+        </label>
+      </div>
+
+      <p class="hint" id="thaiHint" style="display:none;margin:-4px 0 16px;text-align:center;">
+        ⓘ โหมดภาษาไทย: AI จะวิเคราะห์สระ วรรณยุกต์ และบริบทเพื่อถอดความให้อย่างแม่นยำ
+      </p>
+
+      <div class="drop" id="drop" tabindex="0" role="button" aria-label="อัปโหลดภาพ">
+        <div class="drop-icon">✎</div>
+        <p>ลากรูปมาวาง หรือคลิกเพื่อเลือกไฟล์</p>
+        <p class="hint">รองรับ .jpg .png .webp · หรือถ่ายรูปจากกล้องมือถือได้ทันที</p>
+      </div>
+      <input type="file" id="fileInput" accept="image/*">
+      <input type="file" id="cameraInput" accept="image/*" capture="environment">
+
+      <div class="btnrow" id="initialBtnRow">
+        <button type="button" id="btnUpload">เลือกรูปจากเครื่อง</button>
+        <button type="button" id="btnCamera">ถ่ายภาพด้วยกล้อง</button>
+      </div>
+
+      <div class="preview" id="preview" style="display:none;">
+        <img id="previewImg" alt="ภาพลายมือที่เลือก">
+        <div class="btnrow">
+          <button type="button" class="primary" id="btnRead">อ่านลายมือ</button>
+          <button type="button" id="btnClearImage" style="background:#fff; color:var(--wax); border-color:var(--wax);">ล้างรูปภาพ</button>
+          <button type="button" id="btnReset">เลือกรูปใหม่</button>
+        </div>
+      </div>
+
+      <div class="progress-wrap" id="progressWrap">
+        <div class="progress-label">
+          <span id="progressText">กำลังเตรียมระบบอ่านตัวอักษร…</span>
+          <span id="progressPct">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div id="techDetail" style="display:none;margin-top:8px;font-size:11.5px;color:#8A8577;word-break:break-word;"></div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="panel">
+          <div class="panel-label">
+            <span class="flag">✎</span>
+            <span id="ocrLabel">ข้อความที่อ่านได้ (แก้ไขได้)</span>
+            <button type="button" class="copy-btn" id="btnCopy">คัดลอก</button>
+          </div>
+          <textarea id="ocrText" placeholder="ข้อความที่อ่านได้จากลายมือจะแสดงที่นี่…"></textarea>
+          <div class="correction-note" id="correctionNote"></div>
+
+          <!-- ระบบประเมินความแม่นยำ (Feedback Rating System) -->
+          <div class="rating-box" id="ratingBox">
+            <div class="rating-header">
+              <span>⭐ ให้คะแนนความแม่นยำในการถอดลายมือ:</span>
+              <span class="rating-score-display" id="ratingScoreText">ยังไม่ได้ประเมิน</span>
+            </div>
+            <div style="display:flex; align-items:center; gap: 12px; flex-wrap: wrap;">
+              <div class="stars-wrapper" id="starsWrapper">
+                <span class="star" data-rating="1" title="20% - ปรับปรุง">★</span>
+                <span class="star" data-rating="2" title="40% - พอใช้">★</span>
+                <span class="star" data-rating="3" title="60% - ปานกลาง">★</span>
+                <span class="star" data-rating="4" title="80% - ดีมาก">★</span>
+                <span class="star" data-rating="5" title="100% - สมบูรณ์แบบ">★</span>
+              </div>
+              <button type="button" id="btnSubmitRating" style="padding: 6px 14px; font-size: 12.5px; margin-left: auto;">บันทึกคะแนน</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <section class="history-box" id="historyBox" aria-label="ประวัติการถอดความ">
+        <div class="history-title">
+          <span>📜 ประวัติการถอดความของ <span id="historyUsername"></span></span>
+          <button type="button" id="btnClearHistory" style="padding: 2px 6px; font-size: 11px; background:none; border:none; color:var(--wax); cursor:pointer;">ล้างประวัติ</button>
+        </div>
+        <form class="history-search" id="historySearchForm">
+          <input type="search" id="historySearch" placeholder="ค้นหาข้อความในประวัติ..." maxlength="200" aria-label="ค้นหาประวัติ">
+          <button type="submit">ค้นหา</button>
+          <button type="button" id="btnRefreshHistory">รีเฟรช</button>
+        </form>
+        <div class="history-status" id="historyStatus" role="status" aria-live="polite"></div>
+        <div class="history-list" id="historyList"></div>
+        <div class="history-pager" id="historyPager">
+          <button type="button" id="btnHistoryPrevious">ก่อนหน้า</button>
+          <span id="historyPageLabel"></span>
+          <button type="button" id="btnHistoryNext">ถัดไป</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const DOM = {
+      authScreen: document.getElementById('authScreen'),
+      mainAppScreen: document.getElementById('mainAppScreen'),
+      loginUsername: document.getElementById('loginUsername'),
+      loginApiKey: document.getElementById('loginApiKey'),
+      togglePasswordBtn: document.getElementById('togglePasswordBtn'),
+      rememberKey: document.getElementById('rememberKey'),
+      authError: document.getElementById('authError'),
+      btnLoginSubmit: document.getElementById('btnLoginSubmit'),
+      keyBadgeDisplay: document.getElementById('keyBadgeDisplay'),
+
+      drop: document.getElementById('drop'),
+      fileInput: document.getElementById('fileInput'),
+      cameraInput: document.getElementById('cameraInput'),
+      btnUpload: document.getElementById('btnUpload'),
+      btnCamera: document.getElementById('btnCamera'),
+      initialBtnRow: document.getElementById('initialBtnRow'),
+      preview: document.getElementById('preview'),
+      previewImg: document.getElementById('previewImg'),
+      btnRead: document.getElementById('btnRead'),
+      btnClearImage: document.getElementById('btnClearImage'),
+      btnReset: document.getElementById('btnReset'),
+      progressWrap: document.getElementById('progressWrap'),
+      progressFill: document.getElementById('progressFill'),
+      progressPct: document.getElementById('progressPct'),
+      progressText: document.getElementById('progressText'),
+      result: document.getElementById('result'),
+      ocrText: document.getElementById('ocrText'),
+      step1: document.getElementById('step1'),
+      step2: document.getElementById('step2'),
+      btnCopy: document.getElementById('btnCopy'),
+      correctionNote: document.getElementById('correctionNote'),
+      techDetail: document.getElementById('techDetail'),
+      thaiHint: document.getElementById('thaiHint'),
+      langOptions: document.querySelectorAll('input[name="ocrLang"]'),
+      historyBox: document.getElementById('historyBox'),
+      historyList: document.getElementById('historyList'),
+      historyUsername: document.getElementById('historyUsername'),
+      historySearchForm: document.getElementById('historySearchForm'),
+      historySearch: document.getElementById('historySearch'),
+      historyStatus: document.getElementById('historyStatus'),
+      historyPageLabel: document.getElementById('historyPageLabel'),
+      btnClearHistory: document.getElementById('btnClearHistory'),
+      btnRefreshHistory: document.getElementById('btnRefreshHistory'),
+      btnHistoryPrevious: document.getElementById('btnHistoryPrevious'),
+      btnHistoryNext: document.getElementById('btnHistoryNext'),
+
+      starsWrapper: document.getElementById('starsWrapper'),
+      ratingScoreText: document.getElementById('ratingScoreText'),
+      btnSubmitRating: document.getElementById('btnSubmitRating')
+    };
+
+    const GEMINI_CONFIG = {
+      model: 'gemini-3.6-flash',
+      fallbackModels: ['gemini-3.5-flash-lite']
+    };
+
+    let activeApiKey = '';
+    let activeUsername = '';
+    let activeUserId = null;
+    let currentFile = null;
+    let currentPreviewUrl = null;
+    let processGeneration = 0;
+    let currentSelectedRating = 0;
+    let historyOffset = 0;
+    let historyRequestId = 0;
+    const HISTORY_PAGE_SIZE = 20;
+
+    if (DOM.togglePasswordBtn) {
+      DOM.togglePasswordBtn.addEventListener('click', () => {
+        if (DOM.loginApiKey.type === 'password') {
+          DOM.loginApiKey.type = 'text';
+          DOM.togglePasswordBtn.textContent = '🙈';
+        } else {
+          DOM.loginApiKey.type = 'password';
+          DOM.togglePasswordBtn.textContent = '👁️';
+        }
+      });
+    }
+
+    async function checkStoredSession() {
+      const savedKey = localStorage.getItem('laimue_gemini_key') || sessionStorage.getItem('laimue_gemini_key');
+      const savedStorage = localStorage.getItem('laimue_gemini_key') ? localStorage : sessionStorage;
+      const savedUsername = savedStorage.getItem('laimue_username') || '';
+      const savedUserId = Number(savedStorage.getItem('laimue_user_id'));
+      DOM.loginUsername.value = savedUsername;
+      if (savedKey && savedUsername.trim() && Number.isSafeInteger(savedUserId) && savedUserId > 0) {
+        activeApiKey = savedKey.trim();
+        activeUsername = savedUsername.trim();
+        activeUserId = savedUserId;
+        showMainApp();
+      } else {
+        showAuthScreen();
+      }
+    }
+
+    async function handleLogin() {
+      const username = DOM.loginUsername.value.trim();
+      const key = DOM.loginApiKey.value.trim();
+      if (!username) {
+        showAuthError('กรุณาตั้งชื่อผู้ใช้งานก่อนเข้าใช้งาน');
+        return;
+      }
+      if (!key) {
+        showAuthError('กรุณากรอก API Key ก่อนเข้าใช้งาน');
+        return;
+      }
+
+      DOM.btnLoginSubmit.disabled = true;
+      DOM.btnLoginSubmit.textContent = 'กำลังตรวจสอบคีย์...';
+      showAuthError('');
+
+      try {
+        const testEndpoint = `https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}`;
+        const response = await fetch(testEndpoint);
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data?.error?.message || 'API Key ไม่ถูกต้องหรือถูกปฏิเสธการเชื่อมต่อ');
+        }
+
+        const loginResponse = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username })
+        });
+        const loginData = await loginResponse.json();
+        if (!loginResponse.ok || !loginData.success || !loginData.user?.id) {
+          throw new Error(loginData?.error || 'ไม่สามารถลงทะเบียนชื่อผู้ใช้กับฐานข้อมูลได้');
+        }
+
+        activeApiKey = key;
+        activeUsername = username;
+        activeUserId = Number(loginData.user.id);
+        let storageError = null;
+        try {
+          localStorage.removeItem('laimue_gemini_key');
+          localStorage.removeItem('laimue_username');
+          localStorage.removeItem('laimue_user_id');
+          sessionStorage.removeItem('laimue_gemini_key');
+          sessionStorage.removeItem('laimue_username');
+          sessionStorage.removeItem('laimue_user_id');
+          const storage = DOM.rememberKey.checked ? localStorage : sessionStorage;
+          storage.setItem('laimue_gemini_key', key);
+          storage.setItem('laimue_username', username);
+          storage.setItem('laimue_user_id', String(activeUserId));
+        } catch (error) {
+          storageError = error;
+        }
+
+        showMainApp();
+        if (storageError) {
+          alert(`เข้าสู่ระบบแล้ว แต่บันทึกคีย์ในเบราว์เซอร์ไม่ได้: ${storageError.message || String(storageError)}`);
+        }
+      } catch (err) {
+        showAuthError(`เกิดข้อผิดพลาด: ${err.message || 'คีย์ไม่ถูกต้อง กรุณาตรวจสอบอีกครั้ง'}`);
+      } finally {
+        DOM.btnLoginSubmit.disabled = false;
+        DOM.btnLoginSubmit.textContent = 'เข้าสู่ระบบใช้งาน';
+      }
+    }
+
+    function handleLogout() {
+      activeApiKey = '';
+      activeUserId = null;
+      activeUsername = '';
+      localStorage.removeItem('laimue_gemini_key');
+      localStorage.removeItem('laimue_username');
+      localStorage.removeItem('laimue_user_id');
+      sessionStorage.removeItem('laimue_gemini_key');
+      sessionStorage.removeItem('laimue_username');
+      sessionStorage.removeItem('laimue_user_id');
+      DOM.loginApiKey.value = '';
+      DOM.loginUsername.value = '';
+      resetApp();
+      showAuthScreen();
+    }
+
+    function showAuthScreen() {
+      DOM.authScreen.style.display = 'flex';
+      DOM.mainAppScreen.style.display = 'none';
+      DOM.authError.style.display = 'none';
+    }
+
+    function showMainApp() {
+      DOM.authScreen.style.display = 'none';
+      DOM.mainAppScreen.style.display = 'block';
+      
+      const maskedKey = activeApiKey.length > 8 
+        ? activeApiKey.substring(0, 4) + '••••••••' + activeApiKey.substring(activeApiKey.length - 4)
+        : '••••••••••••';
+      DOM.keyBadgeDisplay.textContent = `👤 ${activeUsername} · 🔑 Key: ${maskedKey}`;
+      DOM.historyUsername.textContent = activeUsername;
+      historyOffset = 0;
+      loadHistory();
+    }
+
+    function showAuthError(msg) {
+      DOM.authError.textContent = msg;
+      DOM.authError.style.display = 'block';
+    }
+
+    function setStep(stepNumber) {
+      [DOM.step1, DOM.step2].forEach((el, index) => {
+        if (!el) return;
+        el.classList.remove('active', 'done');
+        if (index + 1 < stepNumber) el.classList.add('done');
+        if (index + 1 === stepNumber) el.classList.add('active');
+      });
+    }
+
+    function updateProgress(percent, text) {
+      if (DOM.progressFill) DOM.progressFill.style.width = `${percent}%`;
+      if (DOM.progressPct) DOM.progressPct.textContent = `${percent}%`;
+      if (DOM.progressText && text) DOM.progressText.textContent = text;
+    }
+
+    function updateThaiHint() {
+      const selectedLang = document.querySelector('input[name="ocrLang"]:checked');
+      if (DOM.thaiHint) {
+        DOM.thaiHint.style.display = (selectedLang && selectedLang.value === 'tha') ? 'block' : 'none';
+      }
+    }
+
+    function showStatusBadge(isThai, modelUsed) {
+      if (!DOM.correctionNote) return;
+      DOM.correctionNote.classList.add('show', 'fixed');
+      const langLabel = isThai ? 'ภาษาไทย' : 'ภาษาอังกฤษ';
+      DOM.correctionNote.innerHTML = `<span class="dot"></span>ถอดลายมือ${langLabel}ด้วย ${modelUsed}`;
+    }
+
+    function cleanRecognizedText(text, isThai) {
+      if (!text) return '';
+      let cleaned = text.trim();
+      cleaned = cleaned.replace(/^```[a-zA-Z]*\s*/, '').replace(/\s*```$/, '');
+
+      if (!isThai) {
+        cleaned = cleaned.replace(/[^\S\r\n]+/g, ' ');
+      }
+      return cleaned.trim();
+    }
+
+    function getOptimizedBase64(file, maxWidth = 1440, quality = 0.6, timeoutMs = 15000) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        const url = URL.createObjectURL(file);
+        const cleanup = () => {
+          clearTimeout(timeoutId);
+          URL.revokeObjectURL(url);
+          img.onload = null;
+          img.onerror = null;
+        };
+        const timeoutId = setTimeout(() => {
+          cleanup();
+          img.src = '';
+          reject(new Error('หมดเวลาในการประมวลผลรูปภาพ (Timeout)'));
+        }, timeoutMs);
+        
+        img.onload = () => {
+          try {
+            let width = img.width;
+            let height = img.height;
+            if (!width || !height) throw new Error('รูปภาพไม่มีขนาดที่ใช้งานได้');
+
+            if (width > maxWidth || height > maxWidth) {
+              if (width > height) {
+                height = Math.round((height * maxWidth) / width);
+                width = maxWidth;
+              } else {
+                width = Math.round((width * maxWidth) / height);
+                height = maxWidth;
+              }
+            }
+
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) throw new Error('เบราว์เซอร์ไม่สามารถเตรียมพื้นที่ประมวลผลภาพได้');
+            ctx.drawImage(img, 0, 0, width, height);
+
+            const dataUrl = canvas.toDataURL('image/jpeg', quality);
+            const base64String = dataUrl.split(',')[1];
+            if (!base64String) throw new Error('ไม่สามารถแปลงรูปภาพเป็น JPEG ได้');
+            cleanup();
+            resolve(base64String);
+          } catch (error) {
+            cleanup();
+            reject(error);
+          }
+        };
+        img.onerror = () => {
+          cleanup();
+          reject(new Error('ไม่สามารถอ่านไฟล์รูปภาพได้'));
+        };
+        img.src = url;
+      });
+    }
+
+    async function callGeminiVision(file, isThai, apiKey) {
+      updateProgress(35, 'กำลังประมวลผลรูปภาพผ่าน AI (Gemini)...');
+      const base64Data = await getOptimizedBase64(file, 2048, 0.9);
+
+      const prompt = isThai
+        ? 'ถอดลายมือภาษาไทยจากภาพอย่างเคร่งครัด อ่านทีละบรรทัดจากบนลงล่างและจากซ้ายไปขวา คงคำเดิม การสะกด วรรณยุกต์ ตัวเลข เครื่องหมายวรรคตอน และการขึ้นบรรทัดตามภาพ ห้ามคาดเดาจากบริบท ห้ามแก้คำ ห้ามสรุปหรือแปล หากอ่านบางส่วนไม่ออก ให้ใส่ [อ่านไม่ชัด] เฉพาะส่วนนั้น ส่งเฉพาะข้อความที่ถอดได้'
+        : 'Transcribe the handwriting exactly as visible, line by line from top to bottom and left to right. Preserve the original spelling, capitalization, numbers, punctuation, and line breaks. Do not infer missing words from context, correct, summarize, or translate. If only part is unreadable, mark only that part as [illegible]. Return only the transcription.';
+
+      const modelsToTry = [GEMINI_CONFIG.model, ...(GEMINI_CONFIG.fallbackModels || [])];
+
+      let lastError = null;
+      for (const modelName of modelsToTry) {
+        updateProgress(50, `กำลังส่งข้อมูลไปยัง AI (${modelName})...`);
+        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 25000);
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            signal: controller.signal,
+            body: JSON.stringify({
+              contents: [{
+                parts: [
+                  { text: prompt },
+                  { inlineData: { mimeType: 'image/jpeg', data: base64Data } }
+                ]
+              }],
+              generationConfig: { maxOutputTokens: 2048 }
+            })
+          });
+          const data = await response.json();
+
+          if (!response.ok) {
+            const errorMessage = data?.error?.message || `HTTP ${response.status}`;
+            if (response.status === 403 && /reported as leaked/i.test(errorMessage)) {
+              const error = new Error(errorMessage);
+              error.name = 'LeakedApiKeyError';
+              throw error;
+            }
+            const error = new Error(`${modelName}: ${errorMessage}`);
+            if (response.status === 404 || response.status === 429 || response.status >= 500) {
+              lastError = error;
+              continue;
+            }
+            throw error;
+          }
+
+          const textResult = data?.candidates?.[0]?.content?.parts
+            ?.filter(part => typeof part.text === 'string' && !part.thought)
+            .map(part => part.text)
+            .join('')
+            .trim();
+          if (textResult) return { text: textResult, model: modelName };
+
+          const blockReason = data?.promptFeedback?.blockReason;
+          const finishReason = data?.candidates?.[0]?.finishReason;
+          lastError = new Error(blockReason
+            ? `${modelName}: คำขอถูกปฏิเสธโดยระบบความปลอดภัย (${blockReason})`
+            : `${modelName}: API ไม่ส่งข้อความกลับมา${finishReason ? ` (finishReason: ${finishReason})` : ''}`);
+          continue;
+        } catch (err) {
+          if (err?.name === 'LeakedApiKeyError') throw err;
+          if (err?.name === 'AbortError') {
+            throw new Error(`หมดเวลาเชื่อมต่อกับ ${modelName} (25 วินาที) กรุณาลองใหม่`);
+          }
+          throw err;
+        } finally {
+          clearTimeout(timeoutId);
+        }
+      }
+
+      throw lastError || new Error('การเชื่อมต่อกับระบบ AI ล้มเหลว');
+    }
+
+    function handleFile(file) {
+      if (!file) return;
+      if (!file.type || !file.type.startsWith('image/')) {
+        alert('กรุณาเลือกไฟล์รูปภาพเท่านั้น (เช่น .jpg, .png)');
+        return;
+      }
+
+      processGeneration++;
+      currentFile = file;
+
+      if (currentPreviewUrl) {
+        try { URL.revokeObjectURL(currentPreviewUrl); } catch (e) {}
+      }
+      
+      currentPreviewUrl = URL.createObjectURL(file);
+      if (DOM.previewImg) DOM.previewImg.src = currentPreviewUrl;
+      
+      if (DOM.preview) DOM.preview.style.display = 'block';
+      if (DOM.drop) DOM.drop.style.display = 'none';
+      if (DOM.initialBtnRow) DOM.initialBtnRow.style.display = 'none';
+      
+      if (DOM.result) DOM.result.classList.remove('show');
+      if (DOM.progressWrap) DOM.progressWrap.classList.remove('show');
+      if (DOM.btnRead) DOM.btnRead.disabled = false;
+      if (DOM.correctionNote) DOM.correctionNote.classList.remove('show', 'fixed');
+      if (DOM.techDetail) DOM.techDetail.style.display = 'none';
+      if (DOM.ocrText) DOM.ocrText.value = '';
+      if (DOM.fileInput) DOM.fileInput.value = '';
+      if (DOM.cameraInput) DOM.cameraInput.value = '';
+
+      resetRatingUI();
+      setStep(1);
+    }
+
+    function resetApp() {
+      processGeneration++;
+      currentFile = null;
+
+      if (currentPreviewUrl) {
+        URL.revokeObjectURL(currentPreviewUrl);
+        currentPreviewUrl = null;
+      }
+
+      if (DOM.preview) DOM.preview.style.display = 'none';
+      if (DOM.drop) DOM.drop.style.display = 'block';
+      if (DOM.initialBtnRow) DOM.initialBtnRow.style.display = 'flex';
+      if (DOM.result) DOM.result.classList.remove('show');
+      if (DOM.progressWrap) DOM.progressWrap.classList.remove('show');
+      if (DOM.btnRead) DOM.btnRead.disabled = false;
+      if (DOM.correctionNote) DOM.correctionNote.classList.remove('show', 'fixed');
+      if (DOM.techDetail) DOM.techDetail.style.display = 'none';
+      if (DOM.ocrText) DOM.ocrText.value = '';
+      if (DOM.fileInput) DOM.fileInput.value = '';
+      if (DOM.cameraInput) DOM.cameraInput.value = '';
+
+      resetRatingUI();
+      setStep(1);
+    }
+
+    function resetRatingUI() {
+      currentSelectedRating = 0;
+      if (DOM.ratingScoreText) DOM.ratingScoreText.textContent = 'ยังไม่ได้ประเมิน';
+      if (DOM.btnSubmitRating) {
+        DOM.btnSubmitRating.textContent = 'บันทึกคะแนน';
+        DOM.btnSubmitRating.disabled = false;
+      }
+      const stars = DOM.starsWrapper ? DOM.starsWrapper.querySelectorAll('.star') : [];
+      stars.forEach(s => s.classList.remove('active'));
+    }
+
+    function setRatingStars(rating) {
+      const stars = DOM.starsWrapper ? DOM.starsWrapper.querySelectorAll('.star') : [];
+      const scoreMap = { 1: '20% (ปรับปรุง)', 2: '40% (พอใช้)', 3: '60% (ปานกลาง)', 4: '80% (ดีมาก)', 5: '100% (สมบูรณ์แบบ)' };
+      stars.forEach((s, index) => {
+        if (index < rating) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+      if (DOM.ratingScoreText) DOM.ratingScoreText.textContent = scoreMap[rating] || 'ยังไม่ได้ประเมิน';
+    }
+
+    async function readApiResponse(response) {
+      let data;
+      try {
+        data = await response.json();
+      } catch (error) {
+        throw new Error('เซิร์ฟเวอร์ส่งคำตอบที่อ่านไม่ได้กลับมา');
+      }
+      if (!response.ok) throw new Error(data?.error || `คำขอล้มเหลว (HTTP ${response.status})`);
+      return data;
+    }
+
+    async function loadHistory() {
+      if (!activeUserId) return;
+      const requestId = ++historyRequestId;
+      DOM.historyStatus.textContent = 'กำลังโหลดประวัติ...';
+      DOM.historyList.replaceChildren();
+      const params = new URLSearchParams({
+        user_id: String(activeUserId),
+        q: DOM.historySearch.value.trim(),
+        limit: String(HISTORY_PAGE_SIZE),
+        offset: String(historyOffset)
+      });
+
+      try {
+        const response = await fetch(`/api/history?${params}`);
+        const data = await readApiResponse(response);
+        if (requestId !== historyRequestId) return;
+        const records = Array.isArray(data.records) ? data.records : [];
+        records.forEach(record => {
+          const item = document.createElement('article');
+          item.className = 'history-item';
+
+          const selectButton = document.createElement('button');
+          selectButton.type = 'button';
+          selectButton.className = 'history-preview';
+          selectButton.dataset.text = record.recognized_text || '';
+          selectButton.textContent = record.recognized_text || '';
+          selectButton.title = 'คลิกเพื่อดูข้อความฉบับเต็ม';
+          item.appendChild(selectButton);
+
+          const meta = document.createElement('div');
+          meta.className = 'history-meta';
+          const createdAt = record.created_at ? new Date(record.created_at) : null;
+          meta.textContent = `#${record.id} · ${createdAt && !Number.isNaN(createdAt.getTime())
+            ? createdAt.toLocaleString('th-TH')
+            : 'ไม่ทราบวันที่'}`;
+          item.appendChild(meta);
+          DOM.historyList.appendChild(item);
+        });
+
+        const total = Number(data.total) || 0;
+        const pageCount = Math.ceil(total / HISTORY_PAGE_SIZE);
+        DOM.historyPageLabel.textContent = `${total ? Math.floor(historyOffset / HISTORY_PAGE_SIZE) + 1 : 0} / ${pageCount}`;
+        DOM.btnHistoryPrevious.disabled = historyOffset === 0;
+        DOM.btnHistoryNext.disabled = historyOffset + HISTORY_PAGE_SIZE >= total;
+        DOM.historyStatus.textContent = total
+          ? `พบ ${total.toLocaleString('th-TH')} รายการ`
+          : 'ยังไม่มีประวัติที่ตรงกับคำค้นหา';
+      } catch (error) {
+        if (requestId !== historyRequestId) return;
+        DOM.historyPageLabel.textContent = '';
+        DOM.btnHistoryPrevious.disabled = true;
+        DOM.btnHistoryNext.disabled = true;
+        DOM.historyStatus.textContent = `โหลดประวัติไม่สำเร็จ: ${error.message || String(error)}`;
+      }
+    }
+
+    async function saveHistoryToDatabase(text) {
+      if (!activeUserId) throw new Error('ไม่พบข้อมูลผู้ใช้ กรุณาออกจากระบบแล้วเข้าสู่ระบบใหม่');
+      const response = await fetch('/api/history', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: activeUserId, text })
+      });
+      const data = await readApiResponse(response);
+      historyOffset = 0;
+      await loadHistory();
+      DOM.historyStatus.textContent = 'บันทึกประวัติลงฐานข้อมูลแล้ว';
+      return data.record;
+    }
+
+    async function clearHistory() {
+      if (!activeUserId || !confirm('ต้องการลบประวัติทั้งหมดของผู้ใช้นี้จากฐานข้อมูลหรือไม่?')) return;
+      DOM.historyStatus.textContent = 'กำลังลบประวัติ...';
+      try {
+        const response = await fetch(`/api/history?user_id=${encodeURIComponent(activeUserId)}`, {
+          method: 'DELETE'
+        });
+        const data = await readApiResponse(response);
+        historyOffset = 0;
+        await loadHistory();
+        DOM.historyStatus.textContent = `ลบประวัติแล้ว ${Number(data.deleted) || 0} รายการ`;
+      } catch (error) {
+        DOM.historyStatus.textContent = `ลบประวัติไม่สำเร็จ: ${error.message || String(error)}`;
+      }
+    }
+
+    function selectHistoryItem(button) {
+      if (DOM.ocrText) DOM.ocrText.value = button.dataset.text || '';
+      if (DOM.result) DOM.result.classList.add('show');
+      DOM.result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let eventsInitialized = false;
+
+    function initEvents() {
+      if (eventsInitialized) return;
+      eventsInitialized = true;
+
+      DOM.langOptions.forEach(el => el.addEventListener('change', updateThaiHint));
+      updateThaiHint();
+
+      if (DOM.starsWrapper) {
+        const stars = DOM.starsWrapper.querySelectorAll('.star');
+        stars.forEach(star => {
+          star.addEventListener('click', () => {
+            currentSelectedRating = parseInt(star.getAttribute('data-rating'), 10);
+            setRatingStars(currentSelectedRating);
+          });
+        });
+      }
+
+      if (DOM.historyList) {
+        DOM.historyList.addEventListener('click', event => {
+          const historyButton = event.target.closest('.history-item button');
+          if (historyButton) selectHistoryItem(historyButton);
+        });
+      }
+
+      if (DOM.historySearchForm) {
+        DOM.historySearchForm.addEventListener('submit', event => {
+          event.preventDefault();
+          historyOffset = 0;
+          loadHistory();
+        });
+      }
+
+      if (DOM.historySearch) {
+        let searchTimer;
+        DOM.historySearch.addEventListener('input', () => {
+          clearTimeout(searchTimer);
+          searchTimer = setTimeout(() => {
+            historyOffset = 0;
+            loadHistory();
+          }, 150);
+        });
+      }
+
+      if (DOM.btnRefreshHistory) {
+        DOM.btnRefreshHistory.addEventListener('click', () => loadHistory());
+      }
+      if (DOM.btnClearHistory) {
+        DOM.btnClearHistory.addEventListener('click', clearHistory);
+      }
+      if (DOM.btnHistoryPrevious) {
+        DOM.btnHistoryPrevious.addEventListener('click', () => {
+          historyOffset = Math.max(0, historyOffset - HISTORY_PAGE_SIZE);
+          loadHistory();
+        });
+      }
+      if (DOM.btnHistoryNext) {
+        DOM.btnHistoryNext.addEventListener('click', () => {
+          historyOffset += HISTORY_PAGE_SIZE;
+          loadHistory();
+        });
+      }
+
+      if (DOM.btnSubmitRating) {
+        DOM.btnSubmitRating.addEventListener('click', () => {
+          if (!currentSelectedRating) {
+            alert('กรุณาคลิกเลือกดาวเพื่อประเมินคะแนนก่อนครับ');
+            return;
+          }
+          sessionStorage.setItem('laimue_last_rating', currentSelectedRating);
+          DOM.btnSubmitRating.textContent = 'บันทึกแล้ว ✓';
+          DOM.btnSubmitRating.disabled = true;
+        });
+      }
+
+      if (DOM.drop) {
+        DOM.drop.addEventListener('click', () => DOM.fileInput && DOM.fileInput.click());
+        DOM.drop.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') DOM.fileInput && DOM.fileInput.click(); });
+        DOM.drop.addEventListener('dragover', e => { e.preventDefault(); DOM.drop.classList.add('drag'); });
+        DOM.drop.addEventListener('dragleave', e => { e.preventDefault(); DOM.drop.classList.remove('drag'); });
+        DOM.drop.addEventListener('drop', e => {
+          e.preventDefault();
+          DOM.drop.classList.remove('drag');
+          if (e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0]);
+        });
+      }
+
+      if (DOM.btnUpload) DOM.btnUpload.addEventListener('click', () => DOM.fileInput && DOM.fileInput.click());
+      if (DOM.btnCamera) DOM.btnCamera.addEventListener('click', () => DOM.cameraInput && DOM.cameraInput.click());
+      if (DOM.fileInput) DOM.fileInput.addEventListener('change', e => handleFile(e.target.files[0]));
+      if (DOM.cameraInput) DOM.cameraInput.addEventListener('change', e => handleFile(e.target.files[0]));
+      if (DOM.btnReset) DOM.btnReset.addEventListener('click', resetApp);
+
+      if (DOM.btnClearImage) {
+        DOM.btnClearImage.addEventListener('click', resetApp);
+      }
+
+      if (DOM.btnCopy) {
+        DOM.btnCopy.addEventListener('click', async () => {
+          const text = DOM.ocrText ? DOM.ocrText.value.trim() : '';
+          if (!text) return;
+          try {
+            if (navigator.clipboard?.writeText) {
+              await navigator.clipboard.writeText(text);
+            } else {
+              const copyInput = document.createElement('textarea');
+              copyInput.value = text;
+              copyInput.style.position = 'fixed';
+              copyInput.style.opacity = '0';
+              document.body.appendChild(copyInput);
+              copyInput.select();
+              const copied = document.execCommand('copy');
+              copyInput.remove();
+              if (!copied) throw new Error('เบราว์เซอร์ไม่อนุญาตให้คัดลอกข้อความ');
+            }
+            DOM.btnCopy.textContent = 'คัดลอกแล้ว';
+            DOM.btnCopy.classList.add('copied');
+            setTimeout(() => {
+              DOM.btnCopy.textContent = 'คัดลอก';
+              DOM.btnCopy.classList.remove('copied');
+            }, 1800);
+          } catch (err) {
+            DOM.btnCopy.textContent = 'คัดลอกไม่สำเร็จ';
+            setTimeout(() => { DOM.btnCopy.textContent = 'คัดลอก'; }, 1800);
+          }
+        });
+      }
+
+      if (DOM.btnRead) {
+        DOM.btnRead.addEventListener('click', async () => {
+          if (!currentFile || DOM.btnRead.disabled) return;
+
+          const runId = ++processGeneration;
+          setStep(2);
+
+          if (DOM.progressWrap) DOM.progressWrap.classList.add('show');
+          DOM.btnRead.disabled = true;
+
+          const selectedLangEl = document.querySelector('input[name="ocrLang"]:checked');
+          const isThai = selectedLangEl?.value === 'tha';
+
+          if (DOM.techDetail) {
+            DOM.techDetail.style.display = 'none';
+            DOM.techDetail.textContent = '';
+          }
+
+          try {
+            if (!activeApiKey) {
+              throw new Error('ไม่พบ API Key กรุณาเข้าสู่ระบบใหม่อีกครั้ง');
+            }
+
+            const resultData = await callGeminiVision(currentFile, isThai, activeApiKey);
+
+            if (runId !== processGeneration) return;
+
+            updateProgress(90, 'กำลังจัดระเบียบข้อความ...');
+            const finalizedText = cleanRecognizedText(resultData.text, isThai);
+
+            updateProgress(100, 'ประมวลผลเสร็จสิ้น!');
+
+            if (DOM.ocrText) DOM.ocrText.value = finalizedText;
+            showStatusBadge(isThai, resultData.model);
+            if (DOM.result) DOM.result.classList.add('show');
+            setStep(2);
+
+            try {
+              await saveHistoryToDatabase(finalizedText);
+            } catch (historyError) {
+              console.error('ถอดข้อความสำเร็จ แต่บันทึกประวัติลงฐานข้อมูลไม่สำเร็จ:', historyError);
+              DOM.historyStatus.textContent = `บันทึกประวัติไม่สำเร็จ: ${historyError.message || String(historyError)}`;
+              if (DOM.techDetail) {
+                DOM.techDetail.style.display = 'block';
+                DOM.techDetail.textContent = `อ่านข้อความสำเร็จ แต่บันทึกประวัติลงฐานข้อมูลไม่ได้: ${historyError.message || String(historyError)}`;
+                DOM.techDetail.style.whiteSpace = 'pre-wrap';
+              }
+            }
+
+          } catch (error) {
+            if (runId !== processGeneration) return;
+
+            if (error?.name === 'LeakedApiKeyError') {
+              activeApiKey = '';
+              activeUserId = null;
+              activeUsername = '';
+              localStorage.removeItem('laimue_gemini_key');
+              localStorage.removeItem('laimue_username');
+              localStorage.removeItem('laimue_user_id');
+              sessionStorage.removeItem('laimue_gemini_key');
+              sessionStorage.removeItem('laimue_username');
+              sessionStorage.removeItem('laimue_user_id');
+              showAuthScreen();
+              showAuthError('Google ระงับ API Key นี้เพราะตรวจพบว่ารั่วไหล กรุณาเพิกถอนคีย์เดิมใน Google AI Studio แล้วสร้างคีย์ใหม่เพื่อเข้าสู่ระบบ');
+              return;
+            }
+
+            if (DOM.techDetail) {
+              DOM.techDetail.style.display = 'block';
+              DOM.techDetail.textContent = `รายละเอียด Error:\n${error?.message || String(error)}`;
+              DOM.techDetail.style.whiteSpace = 'pre-wrap';
+            }
+            updateProgress(0, 'ประมวลผลไม่สำเร็จ กรุณาลองใหม่อีกครั้ง');
+          } finally {
+            if (runId === processGeneration) {
+              DOM.btnRead.disabled = false;
+            }
+          }
+        });
+      }
+    }
+
+    initEvents();
+    checkStoredSession();
+  </script>
+</body>
+</html>
